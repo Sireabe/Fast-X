@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: "Show all files"
-        run: ls
-    
-      - name: "My Message"
-        run: echo "Please lets go watch the movie"
-        
       - name: "run test case"
-        run: exit 1
+        run: echo "running test..."
+    
+      - name: "Pull code"
+        uses: actions/checkout@v2
+        
+      - name: Deploy System
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with: 
+          args: deploy --dir=. --prod
