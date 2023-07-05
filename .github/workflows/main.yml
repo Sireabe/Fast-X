@@ -1,0 +1,20 @@
+name: "Production Pipeline"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  static_test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "Show all files"
+        run: ls
+    
+      - name: "My Message"
+        run: echo "Please lets go watch the movie"
+        
+      - name: "run test case"
+        run: echo "Testing the appp now"
