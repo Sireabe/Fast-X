@@ -2,11 +2,11 @@
 
 ## Hierarchical Block
 
-> > DevOps
-> > > Azure
-> > > > GitHub
-> > > > > Actions
-> > > > > > Pipelines
+> DevOps
+> > Azure
+> > > GitHub
+> > > > Actions
+> > > > > Pipelines
 
 ## Central Block 
 
